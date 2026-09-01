@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://surrounding-physician-towns-afford.trycloudflare.com
+    https://prompt-houston-editorial-alone.trycloudflare.com
 
-Last verified: 2026-09-01T15:26:24Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-01T16:51:44Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
