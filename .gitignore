@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+.open-next/
+.wrangler/
+
+# environment — never commit secrets (acceptance criterion)
+.env
+.env.*
+!.env.example
+
+# logs and local scratch
+*.log
+.DS_Store
+.work/

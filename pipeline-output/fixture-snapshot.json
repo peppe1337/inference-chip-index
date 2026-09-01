@@ -1,0 +1,360 @@
+{
+  "counts": {
+    "quarantined": 1,
+    "released": 5,
+    "scenarioMismatches": 1,
+    "total": 6
+  },
+  "coverageMatrix": [
+    {
+      "acceleratorCount": 8,
+      "acceleratorName": "AMD Instinct MI355X 288GB HBM3e",
+      "reviewRequired": false,
+      "scenario": "Server",
+      "submitter": "amd",
+      "systemId": "8xMI355X_2xEPYC_9575F",
+      "workload": "gpt-oss-120b"
+    },
+    {
+      "acceleratorCount": 4,
+      "acceleratorName": "Intel(R) Arc Pro(R) B70",
+      "reviewRequired": false,
+      "scenario": "Offline",
+      "submitter": "intel",
+      "systemId": "1-node-4x-BMG-B70",
+      "workload": "llama3.1-8b"
+    },
+    {
+      "acceleratorCount": 64,
+      "acceleratorName": "NVIDIA GB200",
+      "reviewRequired": false,
+      "scenario": "Offline",
+      "submitter": "multi-accelerator",
+      "systemId": "GB200-NVL72_GB200-186GB_aarch64x64_TRT",
+      "workload": "deepseek-r1"
+    },
+    {
+      "acceleratorCount": 8,
+      "acceleratorName": "NVIDIA B300-SXM-270GB",
+      "reviewRequired": false,
+      "scenario": "Offline",
+      "submitter": "nvidia",
+      "systemId": "B300-SXM-270GBx8_TRT",
+      "workload": "deepseek-r1"
+    },
+    {
+      "acceleratorCount": 2,
+      "acceleratorName": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "reviewRequired": false,
+      "scenario": "Interactive",
+      "submitter": "nvidia",
+      "systemId": "HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT",
+      "workload": "llama3.1-8b"
+    },
+    {
+      "acceleratorCount": 0,
+      "acceleratorName": "N/A",
+      "reviewRequired": true,
+      "scenario": "Offline",
+      "submitter": "quarantine",
+      "systemId": "1-node-2S-GNR_128C",
+      "workload": "llama3.1-8b"
+    }
+  ],
+  "mode": "fixture",
+  "quarantine": [
+    {
+      "logSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "quarantine/results/1-node-2S-GNR_128C/llama3_1-8b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "358a229cf389c27a4c2cc232caea28cd0ac1cd405f01aef89be79f70d6b6bd0f",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/quarantine/results/1-node-2S-GNR_128C/llama3_1-8b/Offline/performance/run_1/mlperf_log_summary.txt"
+      },
+      "logicalId": "quarantine/1-node-2S-GNR_128C/llama3.1-8b/Offline",
+      "reasons": [
+        "accelerators_per_node is \"0\" (zero) — cannot derive per-accelerator metrics; likely a CPU-only submission."
+      ],
+      "reviewRequired": true,
+      "scenario": "Offline",
+      "submitter": "quarantine",
+      "systemId": "1-node-2S-GNR_128C",
+      "systemSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "quarantine/systems/1-node-2S-GNR_128C.json",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "503ef50597f37fb153e30e7c6c76949469aa7a95bbc109987300a3860e53d265",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/quarantine/systems/1-node-2S-GNR_128C.json"
+      },
+      "workload": "llama3.1-8b"
+    }
+  ],
+  "records": [
+    {
+      "acceleratorCount": 8,
+      "acceleratorName": "AMD Instinct MI355X 288GB HBM3e",
+      "acceleratorNameRaw": "AMD Instinct MI355X 288GB HBM3e",
+      "acceleratorsPerNodeRaw": "8",
+      "contentId": "6d37546b93b998928f69d6ae20134350bdc9f730325674a58e006676018fb851",
+      "logSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "amd/results/8xMI355X_2xEPYC_9575F/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "989d211007a539131c1d39f9e7e695bb1d710426097c56a64681d00e010d0ef5",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/amd/results/8xMI355X_2xEPYC_9575F/gpt-oss-120b/Server/performance/run_1/mlperf_log_summary.txt"
+      },
+      "logicalId": "amd/8xMI355X_2xEPYC_9575F/gpt-oss-120b/Server",
+      "metrics": [
+        {
+          "logKey": "Completed samples per second",
+          "metricId": "server-completed-samples-per-second",
+          "unit": "samples/s",
+          "value": 59.86
+        },
+        {
+          "logKey": "Completed tokens per second",
+          "metricId": "server-completed-tokens-per-second",
+          "unit": "tokens/s",
+          "value": 82136.08
+        },
+        {
+          "logKey": "Scheduled samples per second",
+          "metricId": "server-scheduled-samples-per-second",
+          "unit": "samples/s (scheduled)",
+          "value": 61.29
+        }
+      ],
+      "numberOfNodesRaw": "1",
+      "quarantineReasons": [],
+      "reviewRequired": false,
+      "scenario": "Server",
+      "scenarioInLog": "Server",
+      "scenarioMismatch": false,
+      "scenarioRaw": "Server",
+      "submitter": "amd",
+      "systemId": "8xMI355X_2xEPYC_9575F",
+      "systemSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "amd/systems/8xMI355X_2xEPYC_9575F.json",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "acc5f8384ee6258dc68bd7084b16e20a63f53d47e8268b8e8475613dc58ced9d",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/amd/systems/8xMI355X_2xEPYC_9575F.json"
+      },
+      "valid": true,
+      "workload": "gpt-oss-120b",
+      "workloadRaw": "gpt-oss-120b"
+    },
+    {
+      "acceleratorCount": 4,
+      "acceleratorName": "Intel(R) Arc Pro(R) B70",
+      "acceleratorNameRaw": "Intel(R) Arc Pro(R) B70",
+      "acceleratorsPerNodeRaw": "4",
+      "contentId": "98fdb8128405910c8dcdf20563ff9f63680d277a1e926603549d4e000dbf7411",
+      "logSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "intel/results/1-node-4x-BMG-B70/llama3_1-8b/Offline/performance/run_1/mlperf_log_summary.txt",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "b75ab4a83cdb88d30af4d451675c12fbd2072da094c5883cc349d5d931a61b21",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/intel/results/1-node-4x-BMG-B70/llama3_1-8b/Offline/performance/run_1/mlperf_log_summary.txt"
+      },
+      "logicalId": "intel/1-node-4x-BMG-B70/llama3.1-8b/Offline",
+      "metrics": [
+        {
+          "logKey": "Samples per second",
+          "metricId": "offline-samples-per-second",
+          "unit": "samples/s",
+          "value": 36.0735
+        },
+        {
+          "logKey": "Tokens per second",
+          "metricId": "offline-tokens-per-second",
+          "unit": "tokens/s",
+          "value": 4617.4
+        }
+      ],
+      "numberOfNodesRaw": "1",
+      "quarantineReasons": [],
+      "reviewRequired": false,
+      "scenario": "Offline",
+      "scenarioInLog": "Offline",
+      "scenarioMismatch": false,
+      "scenarioRaw": "Offline",
+      "submitter": "intel",
+      "systemId": "1-node-4x-BMG-B70",
+      "systemSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "intel/systems/1-node-4x-BMG-B70.json",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "5a9dc5fd3fb3f9b838d1e558babd730ef3e40a02ac31037524cf1c79206ca6bb",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/intel/systems/1-node-4x-BMG-B70.json"
+      },
+      "valid": true,
+      "workload": "llama3.1-8b",
+      "workloadRaw": "llama3_1-8b"
+    },
+    {
+      "acceleratorCount": 64,
+      "acceleratorName": "NVIDIA GB200",
+      "acceleratorNameRaw": "NVIDIA GB200",
+      "acceleratorsPerNodeRaw": 4,
+      "contentId": "7ca46da5cbe8aa757a6cb18bba38d3cbcb2d4058e9df676392258cf64abe41cf",
+      "logSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "multi-accelerator/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_summary.txt",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "788738e1e5c8103e11c36b951624948dcb48b5bfc6bea2277da943795a6de188",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/multi-accelerator/results/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_summary.txt"
+      },
+      "logicalId": "multi-accelerator/GB200-NVL72_GB200-186GB_aarch64x64_TRT/deepseek-r1/Offline",
+      "metrics": [
+        {
+          "logKey": "Samples per second",
+          "metricId": "offline-samples-per-second",
+          "unit": "samples/s",
+          "value": 124.763
+        },
+        {
+          "logKey": "Tokens per second",
+          "metricId": "offline-tokens-per-second",
+          "unit": "tokens/s",
+          "value": 468665
+        }
+      ],
+      "numberOfNodesRaw": 16,
+      "quarantineReasons": [],
+      "reviewRequired": false,
+      "scenario": "Offline",
+      "scenarioInLog": "Offline",
+      "scenarioMismatch": false,
+      "scenarioRaw": "Offline",
+      "submitter": "multi-accelerator",
+      "systemId": "GB200-NVL72_GB200-186GB_aarch64x64_TRT",
+      "systemSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "multi-accelerator/systems/GB200-NVL72_GB200-186GB_aarch64x64_TRT.json",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "70d24bdd9043e26beb05fcc81e39f5f022ebb19369da25ce9c68403bb29476ee",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/multi-accelerator/systems/GB200-NVL72_GB200-186GB_aarch64x64_TRT.json"
+      },
+      "valid": true,
+      "workload": "deepseek-r1",
+      "workloadRaw": "deepseek-r1"
+    },
+    {
+      "acceleratorCount": 8,
+      "acceleratorName": "NVIDIA B300-SXM-270GB",
+      "acceleratorNameRaw": "NVIDIA B300-SXM-270GB",
+      "acceleratorsPerNodeRaw": 8,
+      "contentId": "6d63b60bc8fb0881a4b2c3d89da85e5b2913503b3a4823f7b6a162d650e97a92",
+      "logSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "nvidia/results/B300-SXM-270GBx8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_summary.txt",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "6267e425fa227ecde010fbd12eec571877f48230a0c141982f3b81ba6784f0fd",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/nvidia/results/B300-SXM-270GBx8_TRT/deepseek-r1/Offline/performance/run_1/mlperf_log_summary.txt"
+      },
+      "logicalId": "nvidia/B300-SXM-270GBx8_TRT/deepseek-r1/Offline",
+      "metrics": [
+        {
+          "logKey": "Samples per second",
+          "metricId": "offline-samples-per-second",
+          "unit": "samples/s",
+          "value": 18.7489
+        },
+        {
+          "logKey": "Tokens per second",
+          "metricId": "offline-tokens-per-second",
+          "unit": "tokens/s",
+          "value": 70325.7
+        }
+      ],
+      "numberOfNodesRaw": 1,
+      "quarantineReasons": [],
+      "reviewRequired": false,
+      "scenario": "Offline",
+      "scenarioInLog": "Offline",
+      "scenarioMismatch": false,
+      "scenarioRaw": "Offline",
+      "submitter": "nvidia",
+      "systemId": "B300-SXM-270GBx8_TRT",
+      "systemSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "nvidia/systems/B300-SXM-270GBx8_TRT.json",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "fe6fb17a3c441b0ce3cb842275385125bac51fd0539864f66c95e86dd4769946",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/nvidia/systems/B300-SXM-270GBx8_TRT.json"
+      },
+      "valid": true,
+      "workload": "deepseek-r1",
+      "workloadRaw": "deepseek-r1"
+    },
+    {
+      "acceleratorCount": 2,
+      "acceleratorName": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "acceleratorNameRaw": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "acceleratorsPerNodeRaw": 2,
+      "contentId": "9b905caf5cb5530fc567511d05df766cff59375e5d08b12b6e492d22d6735a90",
+      "logSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "nvidia/results/HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT/llama3.1-8b/Interactive/performance/run_1/mlperf_log_summary.txt",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "208b6ba29a9a5b75156dc1b6fa11c8f8e69bd1e1d64899f8a1e85382cc88b829",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/nvidia/results/HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT/llama3.1-8b/Interactive/performance/run_1/mlperf_log_summary.txt"
+      },
+      "logicalId": "nvidia/HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT/llama3.1-8b/Interactive",
+      "metrics": [
+        {
+          "logKey": "Completed samples per second",
+          "metricId": "server-completed-samples-per-second",
+          "unit": "samples/s",
+          "value": 82.09
+        },
+        {
+          "logKey": "Completed tokens per second",
+          "metricId": "server-completed-tokens-per-second",
+          "unit": "tokens/s",
+          "value": 10589.32
+        },
+        {
+          "logKey": "Scheduled samples per second",
+          "metricId": "server-scheduled-samples-per-second",
+          "unit": "samples/s (scheduled)",
+          "value": 82.17
+        }
+      ],
+      "numberOfNodesRaw": 1,
+      "quarantineReasons": [],
+      "reviewRequired": false,
+      "scenario": "Interactive",
+      "scenarioInLog": "Server",
+      "scenarioMismatch": true,
+      "scenarioRaw": "Interactive",
+      "submitter": "nvidia",
+      "systemId": "HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT",
+      "systemSource": {
+        "commit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1",
+        "path": "nvidia/systems/HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT.json",
+        "repository": "https://github.com/mlcommons/inference_results_v6.0",
+        "sha256": "f1cb3fdfa08522802bb4771366ab81414f9fe8d249299fb2de35fca3a8da389b",
+        "url": "https://github.com/mlcommons/inference_results_v6.0/blob/4d3916ac9cf474b679cdfcf492d43a0559418ad1/nvidia/systems/HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT.json"
+      },
+      "valid": true,
+      "workload": "llama3.1-8b",
+      "workloadRaw": "llama3.1-8b"
+    }
+  ],
+  "recordsHash": "20466f51227a04070371428b45de0d9cca07a3943c394b75e40110e66dccc304",
+  "scenarioMismatches": [
+    {
+      "logicalId": "nvidia/HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT/llama3.1-8b/Interactive",
+      "note": "Known case: Interactive directories in MLPerf v6.0 log Scenario: Server. The path scenario (Interactive) is authoritative per pipeline rules. These results are valid and retained; only the scenario label source differs.",
+      "scenarioFromPath": "Interactive",
+      "scenarioInLog": "Server",
+      "submitter": "nvidia",
+      "systemId": "HPE_Proliant_DL385_RTX_PRO_6000_PCIe_96GBx2_TRT_10_14_1_48_TRT",
+      "workload": "llama3.1-8b"
+    }
+  ],
+  "schemaVersion": "1.0.0",
+  "sourceCommit": "4d3916ac9cf474b679cdfcf492d43a0559418ad1"
+}
