@@ -87,7 +87,7 @@ broken on purpose, observed, and then reverted.
 
 | # | Injected fault | Expected | Observed |
 |---|---|---|---|
-| R1 | Removed `price: '0.02'` from the paid `rank-inference-chips` entrypoint — literally the specification's rejection ground "paid endpoints becoming free" | suite must fail | **55 pass → 48 pass / 6 fail** ✅ |
+| R1 | Removed `price: '0.02'` from the paid `rank-inference-chips` entrypoint — literally the specification's rejection ground "paid endpoints becoming free" | suite must fail | **55 pass → 49 pass / 6 fail** ✅ |
 | R2 | Changed the parser output so the record hash no longer matches the pinned expectation | pipeline must refuse | `ERROR: recordsHash mismatch! expected e64b6845… got 63fb607e…`, exit 1 ✅ |
 | R3 | Forced one released row to have `acceleratorCount: null` | fact test must fail | **1 fail** ✅ |
 | R4 | Requested a non-existent `*.trycloudflare.com` subdomain | must not resolve | `curl` exit 6, HTTP 000 ✅ |

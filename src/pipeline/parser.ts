@@ -138,7 +138,8 @@ interface LogParseResult {
   metrics: ParsedMetric[];
   /**
    * Metric IDs that appeared more than once in the log with DIFFERENT values.
-   * Measured over all 284 in-scope v6.0 summaries this is always empty, but a
+   * Measured over all 284 performance/run_1 summary files for the three
+   * workloads in the pinned tree this is always empty, but a
    * contradictory repeat must never be silently resolved by picking one — it is
    * a genuine ambiguity and quarantines the record.
    */
@@ -147,7 +148,8 @@ interface LogParseResult {
 
 /**
  * MLPerf v6.0 summaries print "Completed tokens per second" TWICE (the two lines
- * differ only in padding). Measured across all 284 in-scope summaries: this is
+ * differ only in padding). Measured across all 284 performance/run_1 summary
+ * files for these three workloads in the pinned tree: this is
  * the only repeated key, it occurs in 154 files, and the two values are always
  * identical. We therefore collapse exact repeats and flag contradictions.
  */
