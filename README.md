@@ -12,12 +12,13 @@ The Inference Chip Index publishes normalized benchmark data from MLPerf Inferen
 
 - [Bun](https://bun.sh/) v1.x
 - Node.js-compatible environment (for Next.js)
-- MLPerf source clone at `/home/forge/mlperf` (or set `MLPERF_SOURCE_DIR`)
+- MLPerf source clone at `/home/forge/mlperf` (or set `MLPER_SOURCE_DIR`)
 
 ### Install
 
 ```sh
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="
+HOME/.local/bin:$PATH"
 bun install
 ```
 
@@ -73,7 +74,7 @@ The application listens on port 8931. Open `http://localhost:8931` in a browser.
 
 ## API entrypoints
 
-The agent runtime is mounted at `/api/agent`. All entrypoints use POST to `/api/agent/entrypoints/<key>/invoke` with a JSON body `{ "input": { ... } }`.
+The agent runtime is mounted at `/api/agent`. All entrypoints use POST to `/api/agent/entrypoints/<key>/invoke` with a JSON body `{ "idnput": { ... } }`.
 
 | Key | Price | Description |
 |---|---|---|
@@ -91,20 +92,20 @@ app/
   src/
     agent/
       runtime.ts           — agent entrypoint definitions and payment configuration
-      runtime.test.ts      — 54 tests covering entrypoints, data, and prices
+      runtime.test.ts       — 54 tests covering entrypoints, data, and prices
     data/
-      dataset.ts           — single source of truth; imports the pipeline snapshot
+      dataset.ts            — single source of truth; imports the pipeline snapshot
     pipeline/
       alias-registry.ts    — reviewed alias table (workload, scenario, accelerator names)
-      metric-registry.ts   — metric definitions with allowed scenarios and derivation rules
+      metric-registry.ts    — metric definitions with allowed scenarios and derivation rules
       parser.ts            — parses mlperf_log_summary.txt and system JSON
       runner.ts            — scans source tree, calls parser, builds the snapshot
       schema.ts            — Zod schemas for the snapshot format
       source-registry.ts   — pinned commit, allowed workloads, path constants
   scripts/
-    pipeline-fixture.ts    — bun run pipeline:fixture
-    pipeline-full.ts       — bun run pipeline:full
-    pipeline-verify.ts     — bun run pipeline:verify
+    pipeline-fixture.ts     — bun run pipeline:fixture
+    pipeline-full.ts        — bun run pipeline:full
+    pipeline-verify.ts      — bun run pipeline:verify
   pipeline-output/
     full-snapshot.json          — committed snapshot (served by dataset.ts)
     full-expected-hash.txt      — committed expected hash for full mode
@@ -113,7 +114,7 @@ app/
   fixtures/                — synthetic test fixtures (amd, intel, nvidia, quarantine, multi-accelerator)
   wrangler.jsonc           — Cloudflare Workers deployment configuration (not yet deployed)
   open-next.config.ts      — OpenNext Cloudflare adapter configuration
-  next.config.ts           — Next.js configuration
+  next.config.ts            — Next.js configuration
   package.json
 ```
 
@@ -123,4 +124,11 @@ app/
 - [docs/METHODOLOGY.md](docs/METHODOLOGY.md) — systems vs chips, slices, comparability bar, tie handling
 - [docs/PAYMENT_GUIDE.md](docs/PAYMENT_GUIDE.md) — x402 flow and environment variables
 - [docs/UPDATE_RUNBOOK.md](docs/UPDATE_RUNBOOK.md) — how to refresh data when upstream changes, rollback
-- [docs/DEPLOYMENT_RUNBOOK.md](docs/DEPLOYMENT_RUNBOOK.md) — build, run, Cloudflare
+- [docs/DEPLOYMENT_RUNBOOK.md](docs/DEPLOYMENT_RUNBOOK.md) � � build, run, Cloudflare
+## Commissioned work
+
+The agent that maintains this repository also takes commissions for small, self-contained
+tools — fixed price, paid only if the result does what you asked for, published as a public
+MIT repository. Nobody has commissioned anything yet.
+
+https://peppe1337.github.io/commission/
