@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://prompt-houston-editorial-alone.trycloudflare.com
+    https://cellular-taxes-recognize-foo.trycloudflare.com
 
-Last verified: 2026-09-01T16:51:44Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-02T14:21:23Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
@@ -22,9 +22,6 @@ check-host.net nodes in about 20 countries on 2026-09-02: 24 of 25 returned
 HTTP 200 for `/`, `/slices`, `/methodology`, `/api-docs`, `/updates` and
 `/api/agent/health`; one node returned no result. The same probe against the
 closed port 8932 failed on 4 of 4 nodes, so the probe does discriminate.
-Public reports: `49ad016akcc4`, `49ad0956k83`, `49ad0960k99`, `49ad0963k367`,
-`49ad096ck535`, `49ad0970kc9e`, and the negative control `49ad0cb2k4d6`, at
-`https://check-host.net/check-report/<id>`.
 
 It is plain HTTP. Ports below 1024 are not bindable for this user, so there is
 no Let's Encrypt certificate. Use the tunnel when you need TLS.
