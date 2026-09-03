@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://amplifier-keno-bizrate-appointed.trycloudflare.com
+    https://freeze-biodiversity-offered-bearing.trycloudflare.com
 
-Last verified: 2026-09-03T08:45:16Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T08:59:07Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
