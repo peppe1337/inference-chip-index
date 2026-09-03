@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://copy-considerable-agrees-product.trycloudflare.com
+    https://but-acceptable-tomatoes-cleaning.trycloudflare.com
 
-Last verified: 2026-09-03T13:50:55Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T14:00:15Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
