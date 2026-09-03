@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://perspectives-substances-racing-corn.trycloudflare.com
+    https://pharmacies-representing-kick-zoo.trycloudflare.com
 
-Last verified: 2026-09-03T10:51:06Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T11:01:57Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
