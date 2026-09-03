@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://opens-twisted-projection-foreign.trycloudflare.com
+    https://annie-licensing-pdf-perhaps.trycloudflare.com
 
-Last verified: 2026-09-03T18:22:27Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T18:30:25Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
