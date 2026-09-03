@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://aging-teach-traveling-audio.trycloudflare.com
+    https://transparent-temporal-config-losses.trycloudflare.com
 
-Last verified: 2026-09-03T15:40:46Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T15:50:12Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
