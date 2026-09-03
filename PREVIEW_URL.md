@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://swap-even-wow-meals.trycloudflare.com
+    https://what-russia-migration-utc.trycloudflare.com
 
-Last verified: 2026-09-03T04:49:37Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T04:57:20Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
