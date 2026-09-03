@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://presenting-feelings-strategies-compiled.trycloudflare.com
+    https://amplifier-keno-bizrate-appointed.trycloudflare.com
 
-Last verified: 2026-09-03T08:31:22Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T08:45:16Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
