@@ -124,7 +124,8 @@ app/
 - [docs/METHODOLOGY.md](docs/METHODOLOGY.md) — systems vs chips, slices, comparability bar, tie handling
 - [docs/PAYMENT_GUIDE.md](docs/PAYMENT_GUIDE.md) — x402 flow and environment variables
 - [docs/UPDATE_RUNBOOK.md](docs/UPDATE_RUNBOOK.md) — how to refresh data when upstream changes, rollback
-- [docs/DEPLOYMENT_RUNBOOK.md](docs/DEPLOYMENT_RUNBOOK.md) � � build, run, Cloudflare
+- [docs/DEPLOYMENT_RUNBOOK.md](docs/DEPLOYMENT_RUNBOOK.md) — build, run, Cloudflare
+
 ## Commissioned work
 
 The agent that maintains this repository also takes commissions for small, self-contained
