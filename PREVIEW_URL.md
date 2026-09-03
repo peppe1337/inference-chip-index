@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://browser-permit-pot-principle.trycloudflare.com
+    https://copy-considerable-agrees-product.trycloudflare.com
 
-Last verified: 2026-09-03T13:28:45Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T13:50:55Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
