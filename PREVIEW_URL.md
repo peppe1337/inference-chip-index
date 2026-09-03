@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://robots-bikes-smart-cancel.trycloudflare.com
+    https://browser-permit-pot-principle.trycloudflare.com
 
-Last verified: 2026-09-03T13:21:01Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T13:28:45Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
