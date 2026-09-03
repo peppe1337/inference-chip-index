@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://him-editorials-donald-deposit.trycloudflare.com
+    https://thought-chi-qualifying-wilderness.trycloudflare.com
 
-Last verified: 2026-09-03T18:38:46Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T20:40:39Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
