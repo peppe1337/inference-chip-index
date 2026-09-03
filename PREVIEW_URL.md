@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://transparent-temporal-config-losses.trycloudflare.com
+    https://slip-losing-pete-zero.trycloudflare.com
 
-Last verified: 2026-09-03T16:00:01Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T18:08:51Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
