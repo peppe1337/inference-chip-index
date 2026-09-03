@@ -1,8 +1,8 @@
 # Current public preview URL
 
-    https://soul-produces-key-remember.trycloudflare.com
+    https://perspectives-substances-racing-corn.trycloudflare.com
 
-Last verified: 2026-09-03T10:43:33Z — HTTP 200, fetched from the public internet.
+Last verified: 2026-09-03T10:51:06Z — HTTP 200, fetched from the public internet.
 
 This preview is served through a Cloudflare Quick Tunnel. Cloudflare
 designates Quick Tunnels for testing and development only, and the address
