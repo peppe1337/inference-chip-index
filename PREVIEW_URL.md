@@ -1,30 +1,44 @@
-# Current public preview URL
+# The public preview is OFFLINE
 
-    https://quantum-lou-positioning-summer.trycloudflare.com
+**Status 2026-09-07: both addresses below are down, and they are not coming
+back.**
 
-Last verified: 2026-09-04T03:30:20Z — HTTP 200, fetched from the public internet.
+    https://quantum-lou-positioning-summer.trycloudflare.com   — dead
+    http://167.233.57.1:8931                                   — dead
 
-This preview is served through a Cloudflare Quick Tunnel. Cloudflare
-designates Quick Tunnels for testing and development only, and the address
-changes whenever the tunnel process restarts. A watchdog runs every five
-minutes: it restarts the app and the tunnel if either is down, verifies the
-new address from outside before accepting it, and updates this file.
+Measured, not assumed: an off-site fetcher gets `net::ERR_CONNECTION_REFUSED`
+on the origin address, and nothing is listening on port 8931 on the host.
 
-**This file is the stable pointer — always read the current URL here.**
+## What happened
 
-## Permanent fallback address (no TLS)
+The preview was a Next.js app behind a Cloudflare Quick Tunnel, kept alive by a
+five-minute watchdog. At **2026-09-06T08:05:01Z** the watchdog lost the ability
+to rebuild the app (`next: command not found` — the build tool is not on the
+watchdog's PATH) and has failed every five minutes since. The preview was
+therefore unreachable for about 32 hours before this file was corrected.
 
-    http://167.233.57.1:8931
+The watchdog was removed on 2026-09-07 as part of shutting this work down.
+Nothing is left to restart the app.
 
-This is the origin server itself. It does not rotate. If the tunnel address
-above is stale when you read this, use it. Measured from 25 independent
-check-host.net nodes in about 20 countries on 2026-09-02: 24 of 25 returned
-HTTP 200 for `/`, `/slices`, `/methodology`, `/api-docs`, `/updates` and
-`/api/agent/health`; one node returned no result. The same probe against the
-closed port 8932 failed on 4 of 4 nodes, so the probe does discriminate.
-Public reports: `49ad016akcc4`, `49ad0956k83`, `49ad0960k99`, `49ad0963k367`,
-`49ad096ck535`, `49ad0970kc9e`, and the negative control `49ad0cb2k4d6`, at
-`https://check-host.net/check-report/<id>`.
+## Correction to what this file said before
 
-It is plain HTTP. Ports below 1024 are not bindable for this user, so there is
-no Let's Encrypt certificate. Use the tunnel when you need TLS.
+This file previously stated that a watchdog verifies each new address from
+outside and keeps this pointer current, and it named both addresses as usable.
+**From 2026-09-06T08:05Z onward that was wrong**, and the file kept saying it
+for roughly 32 hours. Anyone reading it in that window was sent to two dead
+addresses.
+
+Why it went unnoticed is worth recording: a reachability check through the
+third-party fetcher `r.jina.ai` returned **HTTP 200 with the full, correct
+page** for an address that in fact refuses connections — it served a cached
+copy. The same request with a cache-busting query string returns the real
+`ERR_CONNECTION_REFUSED`. A cached 200 cannot be told apart from a live one
+unless you defeat the cache.
+
+## The content still exists
+
+The site was a view over MLCommons Inference v6.0 results, pinned to source
+commit
+[`4d3916a`](https://github.com/mlcommons/inference_results_v6.0/tree/4d3916ac9cf474b679cdfcf492d43a0559418ad1).
+The application source is in this repository and can be built and run locally.
+There is no hosted instance and none is planned.
